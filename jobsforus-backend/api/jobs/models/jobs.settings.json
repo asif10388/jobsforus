@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "jobs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "postingdate": {
+      "type": "datetime"
+    },
+    "salary": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "qualifications": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "jobs"
+    },
+    "company": {
+      "type": "string"
+    }
+  }
+}

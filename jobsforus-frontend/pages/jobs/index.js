@@ -13,7 +13,7 @@ const Jobs = ({ jobs }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/jobs`);
+  const res = await fetch(`${API_URL}/jobs`);
   const jobs = await res.json();
   return {
     props: {

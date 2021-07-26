@@ -11,7 +11,7 @@ const Jobcomponent = ({ job }) => {
               src="https://dummyimage.com/200x200"
             />
             <div class="flex-grow sm:pl-8">
-              <h2 class="text-gray-500">Company</h2>
+              <h2 class="text-gray-500">{job.company}</h2>
               <h3 class="title-font text-lg font-medium text-gray-900 mb-3">
                 {job.title}
               </h3>

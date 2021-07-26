@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Search from "../Search/Search";
+
 const Header = () => {
   return (
     <div>
@@ -9,6 +11,7 @@ const Header = () => {
               <span class="ml-3 text-xl">Jobs for Us</span>
             </a>
           </Link>
+          <Search />
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <Link href="/jobs">
               <a class="mr-5 hover:text-gray-900">Jobs</a>
